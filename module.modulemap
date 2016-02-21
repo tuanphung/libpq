@@ -1,9 +1,6 @@
 module libpq [system] {
-	#if os(Linux)
-		header "/usr/include/postgresql/libpq-fe.h"
-	#else
-		header "/usr/local/include/libpq-fe.h"
-	#endif
+	header "/usr/include/postgresql/libpq-fe.h"
+	header "/usr/local/include/libpq-fe.h"
 	link "pq"
 	export *
 }
